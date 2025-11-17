@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Orbit + Fast Spin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+      }
+      .inner {
+        width: 40px;
+        height: 40px;
+        transform-origin: 0 0;
+        animation: revolute 4s linear infinite;
+      }
+
+      .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #f06, transparent);
+        animation: spin 0.5s linear infinite;
+        transform-origin: center center;
+      }
+
+      @keyframes revolute {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(calc(100vw - 40px), 0);
+        }
+        50% {
+          transform: translate(calc(100vw - 40px), calc(100vh - 40px));
+        }
+        75% {
+          transform: translate(0, calc(100vh - 40px));
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

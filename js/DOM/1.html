@@ -1,0 +1,91 @@
+<!-- Document Object Model -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">Test Text</span> </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolore?</p>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+<!-- document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning ​</h1>​
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'heading' 
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').getAttribute('class')
+'heading'
+
+document.getElementById('title').setAttribute('class','test')
+undefined (it changes the value of class to test {class="test"})
+
+document.getElementById('title').setAttribute('class','test' 'heading')
+undefined (it changes the value of class to test heading {class='test heading'})
+
+================================================ how to style through console =========================================================== 
+title.style.backgroundColor = 'green'/hexcode value
+title.style.padding = '15px'
+title.style.borderRadius = '15px'
+
+================================================ how to get text content / Manipulate  ===================================================
+
+title.textContent -> DOM Learning Test text  (sara text milta hai agar hide bhi ho toh ) 
+
+title.innerText  -> DOM Learning (only visible content ata)
+
+title.innerHTML -> uske andar pura ata agar html laga ho 
+
+
+
+=============================================== Query Selector ===========================================================================
+document.querySelectior('css selectors') -> give first query (h1 / #title / .heading / input[type="password"] /p:first-child)
+
+document.querySelectiorAll('css selectors') -> give all query (h1 / #title / .heading / input[type="password"] /p:first-child)
+it gives Nodelist(object)[it is sort of array but not fully]
+
+
+============================================ NodeList ===============================================================================
+const temp = document.querySelectorAll("li")
+temp = [li,li,li]
+temp[0].style.color  = 'green'
+temp.forEach( function(l){
+    l.style.background = 'green'
+})
+
+============================================== HTMLCollection ===============================================
+document.getElementByClassName('li')
+it gives htmlcollection ,which is different from array so we cannot use forEach for this 
+
+to use that we have to convert first into array
+Array.from(HTMLCollection)  => returns array
+ 
+
+-->

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Studio</title>
+    <style>
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .control-panel {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <!-- Profile Card Section -->
+        <div class="profile-card" id="profile-card"></div>
+        <h1 id="display-name">John Doe</h1>
+            <img id="profile-image" src="" alt="Profile Image">
+            <h3 id="display-role">Software Developer</h3>
+            <p id="display-bio">A passionate developer who loves creating web applications.</p>
+            
+            <ul class="skills" id="skills">
+            
+            </ul>
+
+            <div id="details-block" style="display: none;">
+                <h4>Additional Details</h4>
+                <p>More information about the person goes here.</p>
+            </div>
+        </div>
+
+        <!-- Control Panel Section -->
+        <div class="control-panel" id="control-panel">
+            <div class="form-group">
+                <label for="name-input">Name:</label>
+                <input type="text" id="name-input" placeholder="Enter name">
+            </div>
+
+            <div class="form-group">
+                <label for="role-input">Role:</label>
+                <input type="text" id="role-input" placeholder="Enter role">
+            </div>
+
+            <div class="form-group">
+                <label for="bio-input">Bio:</label>
+                <textarea id="bio-input" rows="4" placeholder="Enter bio"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="skill-input">Add Skill:</label>
+                <input type="text" id="skill-input" placeholder="Enter skill">
+                <button id="add-skill-btn">Add Skill</button>
+                <button id="remove-skill-btn">Remove Last Skill</button>
+            </div>
+
+            
+
+            <div class="form-group">
+                <button id="toggle-details-btn">Toggle Details</button>
+                <button id="remove-skill-btn">Remove Last Skill</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const main = document.getElementById('main')
+    const skills = document.getElementsByClassName('skills')
+    
+
+</script>
+</html></div>

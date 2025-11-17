@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Change</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <button class="red"
+        style="background-color: red;">Red</button>
+        <button class="blue" style="background-color: blue;">Blue</button>
+        <button class="green" style="background-color: green;">Green</button>
+        <button class="yellow" style="background-color: yellow;">Yellow</button>
+        <button class="purple" style="background-color: purple;">Purple</button>
+    </div>
+</body>
+<script>
+    const body =document.querySelector('body')
+
+    const buttons = document.querySelectorAll('button')
+
+    buttons.forEach((button)=>{
+        button.addEventListener('click',function(e){
+            body.style.backgroundColor = e.target.className;
+            // console.log(e.target)
+            // console.log(e.target.className)
+        })
+    })
+    
+</script>
+</html>

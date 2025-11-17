@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body style="background-color: #212121; color: white;">
+
+    <h1>Kesar Agrawal</h1>
+    <button>stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('Parth');
+    // },2000)   ek baar print karega
+
+    // const say = function(){
+    //     console.log('Parth');
+    // }
+    // setTimeout(say,2000)  //execute nhi karana hai   say()
+
+    const change = function(){document.querySelector('h1').innerHTML = 'KA'}
+
+    const changeMe = setTimeout(change,2000) 
+    
+    document.querySelector('button').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log('stopped')
+        
+    }
+        
+        );
+
+    
+</script>
+</html>

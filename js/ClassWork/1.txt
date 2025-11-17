@@ -1,0 +1,3 @@
+prototypen inheritance
+
+here blueprint is constructor function and prototypen

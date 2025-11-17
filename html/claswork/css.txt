@@ -1,0 +1,98 @@
+CSS -> Cascading Style Sheets
+
+ways to write css -> inline > internal > external
+
+selector priority -> important > id > class > tags > universal
+
+when multiple rules target the same element the browser decides which one wins
+
+
+selector{
+    property : value ;
+}
+h1{
+    color:blue;
+} 
+
+attribute selector -> [type = "text"]  (input [type = "text])
+
+====================================== combinator ========================================================
+
+<nav>
+<a>
+<a>
+<div>
+    <a> descendent
+</div>
+</nav>
+
+
+
+nav a{} descendent combinator  (all)
+nav > a{} child combinator  (only in the nav )
+
+<div>
+    <h2></h2>
+    <p></p> adjacent sibling
+    <p></p>
+</div>
+
+h2 + p{} adjacent sibling
+
+<div>
+    <h2></h2>
+    <img>
+    <p></p> general sibling
+    <p></p>
+</div>
+
+h2 ~ p general sibling
+
+
+=========================================== Grouping ==============================================================
+
+h1,h2,.......{
+    property: value
+}
+
+
+========================================= pesudo classes ==========================================================
+1. classes for user interaction :- :hover,:active ,:focus 
+2. structural pesudo classes :- list ke pehle element ko same property deni hai toh we use this
+
+li:first child { }
+li: nth child(no.) { }
+li: last child { }
+.......
+
+
+======================================== pseudo elements ==========================================================
+
+::after
+:: before  / first line / placeholder / first letter
+
+
+============================================ Specifity =====================================================
+
+div
+    h2
+    p
+    img
+    div class =cont_div
+        h2
+        p id=main-p
+
+
+div ~ div ~ p  0 0 0 3
+.cont_div p    0 0 1 1
+#main-p        0 1 0 0
+inline > id > class > type (0 0 0 0 )
+
+
+
+explaination imp > origin > specifity chart (upar) 
+
+
+
+============================================ Box Model =====================================================
+

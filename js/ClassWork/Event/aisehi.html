@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #212121;
+        overflow: hidden;
+    }
+
+    #circle {
+        position: absolute;
+        padding: 15px 30px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.1s ease; /* smooth jump */
+    }
+</style>
+<title>Impossible Button</title>
+</head>
+<body>
+
+<button id="circle">Try to Click Me!</button>
+
+<script>
+const button = document.getElementById('circle');
+const escapeDistance = 100; // distance at which button will move
+
+// Set initial random position
+moveButton();
+
+document.addEventListener('mousemove', (e) => {
+    const rect = button.getBoundingClientRect();
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    // Calculate distance between mouse and button center
+    const buttonX = rect.left + rect.width / 2;
+    const buttonY = rect.top + rect.height / 2;
+    const distance = Math.hypot(mouseX - buttonX, mouseY - buttonY);
+
+    if (distance < escapeDistance) {
+        moveButton();
+    }
+});
+
+function moveButton() {
+    const buttonWidth = button.offsetWidth;
+    const buttonHeight = button.offsetHeight;
+
+    const maxX = window.innerWidth - buttonWidth;
+    const maxY = window.innerHeight - buttonHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    button.style.left = randomX + 'px';
+    button.style.top = randomY + 'px';
+}
+
+// Prevent accidental click
+button.addEventListener('click', (e) => e.preventDefault());
+</script>
+
+</body>
+</html>

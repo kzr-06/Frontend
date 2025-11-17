@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess-Board</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #746b6b;
+
+            
+        }
+        .board{
+            display: flex;
+            flex-wrap: wrap;
+            width: 720px;
+            height: 720px;
+            
+        }
+        .black{
+            width:90px;
+            height:90px;
+            background-color: black;
+        }
+        .white{
+            width:90px;
+            height:90px;
+            background-color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+    </div>
+   <script>
+    const board = document.querySelector('.board')
+    
+
+    for(let row =1 ;row<=8;row++){
+        if(row%2 ==1){
+
+            for(let column =1; column<=8;column++){
+                const box = document.createElement('div');
+                
+                if(column%2==1){
+                    box.className='black'
+                }
+                else{
+                    box.className='white'
+                }
+                board.appendChild(box)
+            }
+        }
+        else{
+            
+            for(let column =1; column<=8;column++){
+                const box = document.createElement('div');
+                
+                if(column%2==0){
+                    box.className='black'
+                }
+                else{
+                    box.className='white'
+                    
+                }
+                board.appendChild(box)
+            }
+        }
+    }
+
+   </script> 
+</body>
+</html>

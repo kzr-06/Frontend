@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Company Card Form</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background: #f3f4f6;
+      margin: 0;
+      padding: 30px 10px;
+      gap: 25px;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+      width: 360px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 6px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 60px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      border: 0;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 14px;
+      width: 100%;
+      font-size: 15px;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    /* Cards Preview Section */
+    .preview {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      max-width: 1000px;
+    }
+
+    .card_body {
+      background: #fff;
+      width: 150px;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: larger;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .card_body img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FORM SECTION -->
+  <form class="card" id="companyForm" autocomplete="off">
+    <h2>Create Company Card</h2>
+
+    <label for="companyName">Company name</label>
+    <input id="companyName" name="companyName" type="text" placeholder="Acme Corp" required maxlength="100" />
+
+    <label for="moto">Moto</label>
+    <input id="moto" name="moto" type="text" placeholder="Innovate your world" maxlength="150" />
+
+    <label for="picture">Image URL</label>
+    <input id="picture" name="picture" type="text" placeholder="https://example.com/image.jpg" />
+
+    <button type="submit" id="submit">Save</button>
+  </form>
+
+  <!-- CARDS PREVIEW SECTION -->
+  <div id="preview" class="preview"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
