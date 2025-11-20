@@ -1,0 +1,2 @@
+component and component instances 
+dom krne ki need nhi bas html  mai kaisa dikhta voh batao
