@@ -1,0 +1,140 @@
+<!-- Task 2: Live Character Counter
+Objective: Practice real-time DOM updates.
+Instructions:
+
+- Create a text area with a counter showing remaining characters (e.g., “Characters left:
+100”).
+- As the user types, update the count in real time.
+- Stop further typing once the limit is reached.
+Bonus (5 marks): Add color change (green → orange → red) as the limit approaches. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Character Counter</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ffe28a, #ffb340, #ff6b00);
+        padding: 20px;
+    }
+
+    .container {
+        display: flex;
+        gap: 30px;
+        padding: 25px;
+        background: #fff8e7;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        transition: 0.3s ease;
+    }
+
+    .container:hover {
+        box-shadow: 0 0 30px rgba(0,0,0,0.25);
+        transform: scale(1.01);
+    }
+
+    textarea {
+        width: 22rem;
+        height: 14rem;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 1rem;
+        outline: none;
+        border: 2px solid #d4c29b;
+        background: #fffae9;
+        resize: none;
+        transition: 0.3s;
+    }
+
+    textarea:focus {
+        border-color: #e4cfb3;
+        background: #fff3cc;
+    }
+
+    .side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .letters, .words {
+        background: #fff3d4;
+        padding: 12px 15px;
+        border-radius: 10px;
+        
+    }
+
+    .letter, .word {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #a16207;
+    }
+
+    .show_letter, .show_word {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 10px;
+        background: #ff7b00;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    button:hover {
+        background: #ff5500;
+        transform: scale(1.05);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    
+    .orange {
+         background-color: rgb(255, 123, 0); 
+        }
+    .red {
+         background-color: red; }
+</style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea name="Live Character Count" id=""></textarea>
+        <div class="side">
+            <div class="letters">
+            <div class="letter">Total letters</div>
+            <div class="show_letter"></div>
+        </div>
+        <div class="words">
+            <div class="word">Total Words</div>
+            <div class="show_word"></div>
+        </div>
+        <button>Clear</button>
+        </div>
+    </div>
+</body>
+<script src="2.js"></script>
+</html>
