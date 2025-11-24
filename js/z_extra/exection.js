@@ -1,8 +1,8 @@
 /*
 JS Execution context
 
-1.global execution context ->refers this
-what is gec of browser which is window obj
+1.global execution context ->refers this which in browser refers window obj
+what is gec of browser -> window obj
 variable environment,scope chain,this keyword    stores 
 
 2. Fuction / functional ex ->

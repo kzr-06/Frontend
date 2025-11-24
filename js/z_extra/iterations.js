@@ -27,6 +27,7 @@ for (const i in arr) {
 const greeting ="Hello future something "
 for (const i of greeting) {
     console.log(i);
+    // "H" "e" "l"......."g"
 }
 for (const i in greeting) {
     console.log(i);

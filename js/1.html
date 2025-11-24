@@ -1,0 +1,163 @@
+<!-- ### 🎯 Task 3:
+
+Make a “Typewriter Effect”:
+
+- Create an empty `<p>` tag.
+- Each time the user types a key, append that key to the `<p>` text.
+    
+    Hint: use `e.key` in the `keydown` event. -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+</body>
+<script>
+    let p = document.querySelector("p")
+    document.addEventListener("keydown",(e)=>{
+        p.textContent += e.key;
+    })
+</script>
+</html> -->
+<!-- 
+
+
+//========================================================================================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" placeholder="Type your name" />
+<p id="output"></p>
+
+<script>
+const input = document.getElementById('name');
+const output = document.getElementById('output');
+
+input.addEventListener('input', e => {
+  output.textContent = `Hello, ${e.target.value || 'stranger'}!`;
+});
+</script>
+
+
+</body>
+</html> -->
+
+
+<!--
+// =======================================================================================================
+
+Make a simple form:
+
+- Input for email
+- “Submit” button
+- When submitted, show “Welcome, [email]!” below
+    
+    Use `preventDefault()` to stop page reload. -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <button type="submit"> Submit </button>
+        <p class="output"></p>
+    </form>
+</body>
+<script>
+    const input = document.querySelector("input")
+    const output = document.querySelector("p")
+    const btn = document.querySelector("button")
+
+    btn.addEventListener("click", e =>{
+        e.preventDefault()
+        output.textContent = `Welcome, ${input.value}`
+        input.value="";
+    })
+
+</script>
+</html> -->
+
+<!-- ========================================================================================================
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dropzone" style="width:150px;height:150px;border:2px dashed gray;text-align:center;line-height:150px;">
+Drop here
+</div>
+<div id="emoji1" class="emoji" draggable="true" style="font-size:50px;cursor:grab;">🐱‍👤</div>
+
+<div id="emoji2" class="emoji" draggable="true" style="font-size:50px;cursor:grab;">🐱</div>
+
+<script>
+const drop = document.getElementById('dropzone');
+const emoji = document.getElementsByClassName('emoji');
+
+drop.addEventListener('dragover', e => e.preventDefault());
+
+drop.addEventListener('drop', e => {
+  e.preventDefault();
+  drop.textContent = "Nice drop!";
+  console.log(e.target);
+  console.log(e.currentTarget);
+  
+});
+</script>
+
+
+</body>
+</html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+  <li>🍎 Apple</li>
+  <li>🍌 Banana</li>
+  <li>🍇 Grapes</li>
+  <p>dsdsd</p>
+</ul>
+
+<script>
+document.getElementById('list').addEventListener('click', e => {
+  if (e.target.tagName === 'LI') {
+    e.target.style.textDecoration = 'line-through';
+  }
+});
+</script>
+
+
+
+
+</body>
+</html>
