@@ -1,0 +1,97 @@
+<!-- Task 5: Interactive Product Filter
+Objective: Combine DOM manipulation with array iteration.
+Instructions:
+
+- Create a list of at least 10 product names with categories (e.g., electronics, clothing, books).
+- Add three buttons — All, Electronics, Clothing.
+- On click, dynamically filter and display only matching products on the page.
+Bonus (5 marks): Add a search box for keyword-based filtering.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Filter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #005fcc;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .product-item {
+      padding: 15px 20px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 16px;
+      min-width: 150px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Product Filter</h1>
+
+  <div class="buttons">
+    <button data-category="all">All</button>
+    <button data-category="electronics">Electronics</button>
+    <button data-category="clothing">Clothing</button>
+    <button data-category="books">Books</button>
+  </div>
+
+  <div class="product-list" id="productList">
+     <div class="product-item" data-category="electronics">Laptop</div>
+    <div class="product-item" data-category="electronics">Smartphone</div>
+    <div class="product-item" data-category="electronics">Headphones</div>
+    <div class="product-item" data-category="clothing">T-Shirt</div>
+    <div class="product-item" data-category="clothing">Jeans</div>
+    <div class="product-item" data-category="clothing">Jacket</div>
+    <div class="product-item" data-category="clothing">Sneakers</div>
+    <div class="product-item" data-category="books">Novel Book</div>
+    <div class="product-item" data-category="books">Science Textbook</div>
+    <div class="product-item" data-category="books">Notebook</div>
+  </div>
+  </div>
+
+</body>
+<script src="script.js"></script>
+</html>
